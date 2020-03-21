@@ -4,7 +4,7 @@ import { action } from "@storybook/addon-actions"
 
 import CallToAction from '../components/form/cta-button';
 
-storiesOf('button', module)
+storiesOf('Building Blocks | Button', module)
     .add('call to action', () => (
         <CallToAction label="submit" onClick={action("button-click")} />
     ))
