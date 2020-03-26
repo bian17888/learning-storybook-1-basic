@@ -1,5 +1,6 @@
 import { configure, addParameters, addDecorator } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info'
+import { withKnobs } from '@storybook/addon-knobs'
 
 import '../bootstrap-reboot.min.css';
 import '../bootstrap.css';
@@ -25,5 +26,8 @@ addParameters({
 addDecorator(withInfo({
   inline: false
 }));
+
+// config withKnobs
+addDecorator(withKnobs)
 
 configure(loadStories, module);

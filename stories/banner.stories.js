@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import { storiesOf } from '@storybook/react'
+import { text } from '@storybook/addon-knobs'
 
 import MajorBanner from '../components/major.banner'
 import MinorBanner from '../components/minor.banner'
 
 storiesOf('Component | Banner/Major', module)
-    .add('with only title', () => (
-        <MajorBanner title="title" photo="People Outdoors/shutterstock_116403520.jpg" />
-    ))
+    .add('with only title', () => {
+        const title = text('Title', 'title')
+        const photo = text('Photo', 'People Outdoors/shutterstock_116403520.jpg')
+        return (<MajorBanner
+            title={title}
+            photo={photo}
+        />)
+    })
     .add('with all text options', () => (
         <MajorBanner
             title="title"
